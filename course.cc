@@ -1,3 +1,8 @@
+/** @file course.cc
+*		@brief implementation for course.h, describes college course
+*		@author John Dolan
+*/
+
 /***********************************************************************
 	The implementation file for course.h, which describes a college
 	course.
@@ -60,11 +65,11 @@ double course::get_number_grade()const{
     if(grade == "B") return 3.0;
     if(grade == "B-") return 2.667;
     if(grade == "C+") return 2.333;
-    if(grade == "C") return 2.0; 
+    if(grade == "C") return 2.0;
     if(grade == "C-") return 1.667;
-    if(grade == "D+") return 1.333; 
+    if(grade == "D+") return 1.333;
     if(grade == "D") return 1.0;
-    if(grade == "D-") return 0.667; 
+    if(grade == "D-") return 0.667;
     if(grade == "F") return 0.0;
     else return 0;
 }

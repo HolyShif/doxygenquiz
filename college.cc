@@ -1,3 +1,7 @@
+/** @file college.cc
+*		@brief implementation for College header
+*		@author Matthew Aberegg
+*/
 //********************
 //Matthew Aberegg
 //Project 3
@@ -90,11 +94,11 @@ void College::add(course& c){
 		delete previous;
 	} else if(head -> data() < c){
 		cursor = head;
-		while (cursor != NULL && cursor -> data() <= c){ 
+		while (cursor != NULL && cursor -> data() <= c){
 			previous = cursor;
 			cursor = cursor-> link();
-		}	
-		if (cursor == NULL){ 
+		}
+		if (cursor == NULL){
 			cursor = new node (c);
 			cursor -> set_link(NULL);
 			previous -> set_link(cursor);
@@ -108,7 +112,7 @@ void College::add(course& c){
 }
 
 void College::remove(std::string coursename){
-	node * previous;	
+	node * previous;
 	node * cursor;
 	if(coursename == head->data().get_course_number()){
 		cursor = head;
@@ -165,7 +169,7 @@ double College::gpa(){
 	ptr = ptr->link();
 	}
 	return (sum / hours());
-} 
+}
 
 void College::save(std::ostream& outs){
 	node * ptr;
@@ -193,11 +197,3 @@ void College::load(std::istream& ins){
 		ptr -> set_link (NULL);
   }
 }
-
-
-
-
-
-
-
-
